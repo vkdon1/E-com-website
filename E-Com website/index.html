@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Time24</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- boosrtap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+     <!-- Animate css -->
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+<!-- favicon -->
+<link rel="icon" type="image.png" sizes="64x64" href="./assets/time-3091031_1280-removebg-preview.png">
+
+    <style>
+    .right-content
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .clock-img
+    {
+      filter: drop-shadow(0 -6mm 4mm rgb(0, 60, 210));filter: drop-shadow(30px 15px 4px #4444dd);
+    }
+    .hero
+    {
+      background-color: rgba(14, 14, 211, 0.552);
+    }
+    .brands
+    {
+      font-family: 'Times New Roman', Times, serif;
+    }
+    .cards
+    {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      background-color: rgba(164, 140, 236, 0.292);
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border-radius: 20px;
+    cursor: pointer;
+    
+}
+.buyer-protection-section {
+      background-color: #0e1a35;
+      color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .buyer-protection-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .buyer-protection-list li::before {
+      content: "✔️";
+      margin-right: 10px;
+      color: #5fcf80;
+    }
+
+    .protection-btn {
+      border: 1px solid #fff;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 6px;
+      margin-top: 20px;
+      display: inline-block;
+      transition: all 0.3s ease-in-out;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .protection-btn:hover {
+      background-color: #fff;
+      color: #0e1a35;
+    }
+
+    .image-side img {
+      width: 400px;
+      height: 350px;
+      object-fit: cover;
+      
+    }
+    .image-side{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      color: #1a1a1a;
+    }
+    
+    .watch-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    
+    .watch-card {
+      background-color: #f5f5f5;
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .watch-image {
+      width: 100%;
+      height: 250px;
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .watch-image img {
+  transition: transform 0.3s ease;
+}
+
+.watch-card:hover .watch-image img {
+  transform: scale(1.2);
+}
+    .watch-image img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    
+    .watch-info {
+      width: 100%;
+      text-align: left;
+    }
+    
+    .watch-brand {
+      color: #1a1a1a;
+      font-weight: 500;
+    }
+    
+    .watch-model {
+      color: #1a1a1a;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    .star {
+      color: #002f6c;
+      font-size: 1rem;
+    }
+
+    .quote {
+      font-style: italic;
+      color: #333;
+    }
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #dee2e6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      color: #555;
+    }
+    
+    @media (min-width: 640px) {
+      .watch-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .watch-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+</style>  
+</head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">Time24</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./About.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./Contact.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./Shop.html">Shop</a>
+              </li>
+              
+           
+            </ul>
+           
+          </div>
+        </div>
+      </nav>
+      <!-- hero section -->
+      <section class="d-flex align-items-center min-vh-100 hero">
+        <div class="container">
+          <div class="row justify-content-start animate__animated animate__backInDown">
+            <div class="col-lg-6 col-12">
+              <h1 class="display-4 fw-bold text-dark animate__animated animate__backInDown">
+                 Elevate Your Style   ⌚
+                <strong class="text-primary">with</strong> Timeless Watches
+              </h1>
+              <p class="mt-3 lead text-secondary text-white">
+                Discover luxury, elegance, and precision at unbeatable prices! Shop from our exclusive collection of premium watches designed for every occasion. Whether it's classic, modern, or smartwatches, we have the perfect timepiece for you.
+              </p>
+              <div class="mt-4 d-flex gap-3">
+                <a class="btn btn-primary px-4 py-2" href="#">Get Started</a>
+                <a class="btn btn-outline-primary clock-imgq`1 px-4 py-2" href="#">Learn More</a>
+              </div>
+            </div>
+            <div class="col-lg-6 col-12 right-content clock-img">
+                <img src="./assets/time-3091031_1280-removebg-preview.png" alt="watch" height="400px" width="600px">
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- brands -->
+     
+     <!-- add -->
+     <div class="container mt-5">
+      <h3 class="brands text-center mb-4">The Leading Marketplace for Luxury Watches Since 2003</h3>
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-12 mb-4">
+          <div class="card card-content h-100 d-flex justify-content-center align-items-center text-center p-3">
+            <div class="card-body">
+              <img src="https://static.chrono24.com/images/default/illustrations/buyer-rating.svg" alt="">
+              <h5 class="card-title mt-3">4.8 out of 5 stars</h5>
+              <p class="card-text">from 174,000 reviews worldwide</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-12 mb-4">
+          <div class="card card-content h-100 d-flex justify-content-center align-items-center text-center p-3">
+            <div class="card-body">
+              <img src="https://static.chrono24.com/images/default/illustrations/love-my-watch.svg" alt="">
+              <h5 class="card-title mt-3">9 million</h5>
+              <p class="card-text">watch enthusiasts use Chrono24 each month</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-12 mb-4">
+          <div class="card card-content h-100 d-flex justify-content-center align-items-center text-center p-3">
+            <div class="card-body">
+              <img src="https://static.chrono24.com/images/default/illustrations/dealer.svg" alt="">
+              <h5 class="card-title mt-3">Over 200,000</h5>
+              <p class="card-text">customers choose Buyer Protection annually</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-12 mb-4">
+          <div class="card card-content h-100 d-flex justify-content-center align-items-center text-center p-3">
+            <div class="card-body">
+              <img src="https://static.chrono24.com/images/default/illustrations/handshake.svg" alt="">
+              <h5 class="card-title mt-3">More than 25,000</h5>
+              <p class="card-text">trustworthy sellers</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- protection -->
+    <div class="container my-5">
+      <div class="row buyer-protection-section">
+        <!-- Text Side -->
+        <div class="col-lg-6 col-md-12 p-5 d-flex flex-column justify-content-center">
+          <h3 class="mb-4">Chrono24 Buyer Protection</h3>
+          <ul class="buyer-protection-list">
+            <li>Payment via the Escrow Service</li>
+            <li>Commitment to Authenticity</li>
+            <li>Global money-back guarantee</li>
+            <li>Strict dealer guidelines</li>
+            <li>Insured shipments</li>
+            <li>Chrono24's quality & security team</li>
+          </ul>
+          <a href="#" class="protection-btn">Learn more about security on Watch24</a>
+        </div>
+  
+        <!-- Image Side -->
+        <div class="col-lg-6 col-md-12 image-side">
+          <img src="https://cdn.pixabay.com/photo/2014/08/05/10/31/waiting-410328_640.jpg" alt="Happy Buyer Image" class="img-fluid" height="300px" width="400px">
+        </div>
+      </div>
+    </div>
+    
+    <!-- Popular Brands -->
+    <div class="container">
+      <h3 class="text-center brands" >Our Most Popular Models</h3>
+      
+      <div class="watch-grid">
+        <div class="watch-card">
+          <div class="watch-image">
+            <img src="https://cdn2.chrono24.com/images/topmodels/1-w70x429knb132x17edf24c63-Main.png" alt="Rolex Datejust">
+          </div>
+          <div class="watch-info">
+            <p class="watch-brand">Rolex</p>
+            <p class="watch-model">Datejust</p>
+          </div>
+        </div>
+        
+        <div class="watch-card">
+          <div class="watch-image">
+            <img src="https://cdn2.chrono24.com/images/topmodels/116-ie7ukr10yfqk1jhqf18dl7ky-Main.png" alt="Rolex Submariner">
+          </div>
+          <div class="watch-info">
+            <p class="watch-brand">Rolex</p>
+            <p class="watch-model">Submariner</p>
+          </div>
+        </div>
+        
+        <div class="watch-card">
+          <div class="watch-image">
+            <img src="https://cdn2.chrono24.com/images/topmodels/74-984eorvfjxmx240c0i4zlfhx-Main.png" alt="Rolex Daytona">
+          </div>
+          <div class="watch-info">
+            <p class="watch-brand">Rolex</p>
+            <p class="watch-model">Daytona</p>
+          </div>
+        </div>
+        
+        <div class="watch-card">
+          <div class="watch-image">
+            <img src="https://cdn2.chrono24.com/images/topmodels/4-s3n4vjwfzcimyvyeizqpl6cv-Main.png" alt="Omega Speedmaster">
+          </div>
+          <div class="watch-info">
+            <p class="watch-brand">Omega</p>
+            <p class="watch-model">Speedmaster</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- what customer syays --> <div class="container py-5 text-center">
+    <h2 class="mb-2 fw-bold">What thousands of happy customers are saying about us</h2>
+    <p class="text-primary fw-medium">
+      <span class="me-1">⭐</span>TrustScore: <em>"Excellent"</em> with 4.8/5 stars
+    </p>
+    <p class="text-muted mb-5">174,467 reviews from around the globe</p>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm p-3">
+          <div class="d-flex justify-content-between mb-2">
+            <div>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+            </div>
+            <span class="text-muted small">This week</span>
+          </div>
+          <p class="quote">
+            “Perfect portal, all in one place, seamless purchasing from anywhere across the globe with the added security of chrono24 being there to provide a safe shopping experience”
+          </p>
+          <div class="d-flex align-items-center mt-4">
+            <div class="avatar me-3">R</div>
+            <div>
+              <div class="fw-bold">Raybrh</div>
+              <div class="text-muted small">UAE</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm p-3">
+          <div class="d-flex justify-content-between mb-2">
+            <div>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+            </div>
+            <span class="text-muted small">This week</span>
+          </div>
+          <p class="quote">
+            “Excellent communication throughout transaction. Good customer service.”
+          </p>
+          <div class="d-flex align-items-center mt-4">
+            <div class="avatar me-3">S</div>
+            <div>
+              <div class="fw-bold">Scott Morgan</div>
+              <div class="text-muted small">Canada</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm p-3">
+          <div class="d-flex justify-content-between mb-2">
+            <div>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+            </div>
+            <span class="text-muted small">This week</span>
+          </div>
+          <p class="quote">
+            “The vendors were great communicators. They were open and forthcoming. Information was passed to me every step of the way and I felt very comfortable.”
+          </p>
+          <div class="d-flex align-items-center mt-4">
+            <div class="avatar me-3">D</div>
+            <div>
+              <div class="fw-bold">Dave Tetrault</div>
+              <div class="text-muted small">United States of America</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer -->
+  <footer class="bg-dark text-light pt-5 pb-3">
+    <div class="container">
+      <div class="row">
+        <!-- Company Info -->
+        <div class="col-md-4 mb-4">
+          <h5 class="text-uppercase fw-bold mb-3">Time24</h5>
+          <p>
+            Time24 is dedicated to providing the best customer experience with top-notch support and quality products.
+          </p>
+        </div>
+  
+        <!-- Useful Links -->
+        <div class="col-md-4 mb-4">
+          <h5 class="text-uppercase fw-bold mb-3">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="./index.html" class="text-light text-decoration-none">Home</a></li>
+            <li><a href="./About.html" class="text-light text-decoration-none">About Us</a></li>
+            <li><a href="./Shop.html" class="text-light text-decoration-none">Services</a></li>
+            <li><a href="./Contact.html" class="text-light text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+  
+        <!-- Social Media -->
+        <div class="col-md-4 mb-4">
+          <h5 class="text-uppercase fw-bold mb-3">Follow Us</h5>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-light fs-5"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-light fs-5"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-light fs-5"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-light fs-5"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Footer Bottom -->
+      <div class="text-center border-top pt-3 mt-3">
+        <p class="mb-0">&copy; 2025 YourBrand. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

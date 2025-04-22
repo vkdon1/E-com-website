@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- boosrtap icons-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- animation cdn -->
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+<!-- favicon -->
+<link rel="icon" type="image.png" sizes="64x64" href="./assets/time-3091031_1280-removebg-preview.png">
+
+  <style>
+ 
+
+body, input, textarea, button {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+.hero
+{
+background-color: #0F2C4F;  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #0F2C4F;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-family: serif;
+}
+
+.underline {
+  width: 80px;
+  height: 4px;
+  background-color: #D4AF37;
+  margin: 20px auto;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 18px;
+}
+
+/* Contact Info */
+.contact-info {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.info-box {
+  text-align: center;
+  border: 1px solid #eee;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #eee;
+}
+
+.info-box .icon {
+  font-size: 36px;
+  color: #D4AF37;
+  margin-bottom: 10px;
+}
+
+.info-box h3 {
+  font-family: serif;
+  margin-bottom: 10px;
+}
+
+/* Contact Form & Map */
+.contact-form-map {
+  padding: 60px 20px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.form-box h2 {
+  font-family: serif;
+  font-size: 32px;
+}
+
+.form-box p {
+  margin: 20px 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+input:focus, textarea:focus {
+  border-color: #D4AF37;
+  outline: none;
+}
+
+button {
+  padding: 14px;
+  background-color: #0F2C4F;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0D2642;
+}
+
+.map-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+/* Store Hours */
+.store-hours {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.hours-box {
+  background-color: white;
+  padding: 30px;
+  max-width: 600px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ddd;
+  text-align: left;
+}
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.hours-box p {
+  margin-top: 20px;
+  color: #555;
+  text-align: center;
+}
+
+.hours-box a {
+  display: block;
+  margin-top: 10px;
+  color: #D4AF37;
+  text-align: center;
+  text-decoration: none;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Footer */
+.footer {
+  background-color: #0F2C4F;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark"">
+    <div class="container">
+      <a class="navbar-brand" href="#">Time24</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./About.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Shop.html">Shop</a>
+          </li>
+          
+       
+        </ul>
+       
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container animate__animated animate__backInDown">
+      <h1 >Contact Us</h1>
+      <div class="underline"></div>
+      <p>We'd love to hear from you. Reach out to our team for inquiries, appointments, or custom orders.</p>
+    </div>
+  </section>
+
+  <!-- Contact Information -->
+  <section class="contact-info">
+    <div class="container">
+      <div class="info-grid">
+        <div class="info-box">
+          <div class="icon">📞</div>
+          <h3>Call Us</h3>
+          <p>Sales & Support</p>
+          <strong>+1 (555) 123-4567</strong>
+        </div>
+
+        <div class="info-box">
+          <div class="icon">✉️</div>
+          <h3>Email Us</h3>
+          <p>For Inquiries</p>
+          <strong>info@watch24.com</strong>
+        </div>
+
+        <div class="info-box">
+          <div class="icon">📍</div>
+          <h3>Visit Us</h3>
+          <p>Flagship Store</p>
+          <strong>123 Luxury Lane, New York, NY 10001</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form & Map -->
+  <section class="contact-form-map">
+    <div class="container grid-2">
+      <div class="form-box">
+        <h2>Get In Touch</h2>
+        <div class="underline"></div>
+        <p>Have questions about our timepieces or services? Fill out the form, and our team will get back to you shortly.</p>
+
+        <form onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <input type="text" placeholder="Full Name" required/>
+            <input type="email" placeholder="Email Address" required/>
+          </div>
+          <input type="text" placeholder="Subject"/>
+          <textarea placeholder="Message" rows="5" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <div class="map-box">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119270.43489738641!2d77.67934327569931!3d20.90422782069184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd6a4a67774bc15%3A0x3c7b3f78ca4f9635!2sAmravati%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1743868291581!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>      </div>
+    </div>
+  </section>
+
+  <!-- Store Hours -->
+  <section class="store-hours">
+    <div class="container">
+      <h2>Store Hours</h2>
+      <div class="underline center"></div>
+
+      <div class="hours-box">
+        <div class="hours-row"><span>Monday - Friday</span><span>10:00 AM - 7:00 PM</span></div>
+        <div class="hours-row"><span>Saturday</span><span>11:00 AM - 6:00 PM</span></div>
+        <div class="hours-row"><span>Sunday</span><span>Closed</span></div>
+        <p class="appointment">Private appointments are available upon request.</p>
+        <a href="#">Book an Appointment</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <!-- footer -->
+  <footer class="bg-dark text-light pt-5 pb-3">
+    <div class="container">
+      <div class="row">
+        <!-- Company Info -->
+        <div class="col-md-4 mb-4">
+          <h5 class="text-uppercase fw-bold mb-3">Time24</h5>
+          <p>
+            Time24 is dedicated to providing the best customer experience with top-notch support and quality products.
+          </p>
+        </div>
+  
+        <!-- Useful Links -->
+        <div class="col-md-4 mb-4">
+          <h5 class="text-uppercase fw-bold mb-3">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="./index.html" class="text-light text-decoration-none">Home</a></li>
+            <li><a href="./About.html" class="text-light text-decoration-none">About Us</a></li>
+            <li><a href="./Shop.html" class="text-light text-decoration-none">Services</a></li>
+            <li><a href="./Contact.html" class="text-light text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+  
+        <!-- Social Media -->
+        <div class="col-md-4 mb-4">
+          <h5 class="text-uppercase fw-bold mb-3">Follow Us</h5>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-light fs-5"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-light fs-5"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-light fs-5"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-light fs-5"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Footer Bottom -->
+      <div class="text-center border-top pt-3 mt-3">
+        <p class="mb-0">&copy; 2025 YourBrand. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      alert("Thank you for your message. We will get back to you shortly!");
+    }
+  </script>
+</body>
+</html>
